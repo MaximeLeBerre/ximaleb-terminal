@@ -11,7 +11,13 @@ const App = () => {
         hello: {
             description: "say Hello",
             fn: () => {
-                return "Welcome on my website ! Have a nice day 👋🏼";
+                return ["Welcome on my website ! ", "Have a nice day 👋🏼"].join("\n");
+            }
+        },
+        projects: {
+            description: 'See all my projects',
+            fn: () => {
+                return ['Webp Converter', 'France Challenges'].join("\n")
             }
         }
     };
