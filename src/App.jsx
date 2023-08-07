@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { createRef } from 'react';
+import Terminal from "react-console-emulator";
+
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    console.log('render')
+    const terminal = createRef();
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    const commands = {
+        hello: {
+            description: "say Hello",
+            fn: () => {
+                return "Welcome on my website ! Have a nice day 👋🏼";
+            }
+        }
+    };
+
+    return (
+        <div>
+            <Terminal
+                className="terminal"
+                ref={terminal}
+                commands={commands}
+                welcomeMessage={"Welcome to Ximaleb Terminal! Type 'help'."}
+                promptLabel={">"}
+                contentStyle={{ color: '#ffb86c' , fontWeight: 'normal', paddingLeft: null}} // Text colour
+                promptLabelStyle={{ color: '#ff5555' , fontWeight:'normal'}} // Prompt label colour
+                inputTextStyle={{ color: '#f1fa8c' , fontWeight: 'normal'}}
+                messageStyle={{ color: '#8be9fd' , fontWeight: 'normal', paddingLeft: null}}
+                scrollBehavior="auto"
+            />
+        </div>
+    );
+};
 
 export default App
