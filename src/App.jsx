@@ -2,6 +2,7 @@ import { createRef } from 'react';
 import Terminal from "react-console-emulator";
 import './App.css'
 import {customCommands} from "./domain/commands/index.js";
+import {prettifyHelpReturn} from "./helper/prettifyHelpReturn.js";
 
 const App = () => {
     const terminal = createRef();
@@ -17,10 +18,7 @@ const App = () => {
         },
         help: {
             fn: () => {
-                return [
-                    `${Object.keys(customCommands.commands).map(cmd => cmd).filter(cmd => customCommands.commands[cmd].hidden !== true).join("\n")}`,
-                    `${Object.keys(customCommands.overwrites).map(cmd => cmd).filter(cmd => customCommands.overwrites[cmd].hidden !== true).join("\n")}`
-                ].join("\n")
+                return prettifyHelpReturn(customCommands)
             }
         },
         ...customCommands.commands

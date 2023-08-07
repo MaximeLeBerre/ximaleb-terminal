@@ -4,6 +4,7 @@ export const customCommands = {
     commands: {
         about: {
             description: "get a summary about me",
+            usage: 'about',
             fn: () => {
                 return [
                     "Hey, my name is Max 👋🏼",
@@ -14,27 +15,51 @@ export const customCommands = {
             },
             hidden: false
         },
-        hiddenCommand: {
+        hello: {
             fn: () => {
-                return 'GG à toi bg'
+                return "Hey, welcome on this guessing game. Congrats, You find the first command."
             },
             hidden: true
         },
         projects: {
             description: 'See all my projects',
+            usage: 'projects',
             fn: () => {
-                return ["Webp Converter", "France Challenges"]
+                return ["webp-converter", "france-challenges"].join("\n")
             },
             hidden: false
         },
+        goTo: {
+            description: 'Open project',
+            usage: 'goTo <project-name>',
+            args: ['france-challenges', 'webp-converter'],
+            fn: (args) => {
+                if(args === 'webp-converter') {
+                     window.open("https://github.com/MaximeLeBerre/webp-converter", "_blank")
+                    return 'Project opened (https://github.com/MaximeLeBerre/webp-converter)'
+                }
+                if(args === 'france-challenges') {
+                    window.open("https://france-challenges.com", "_blank")
+                    return 'Project opened (https://france-challenges.com)'
+                }
+                return 'invalid params'
+            }
+        },
+        github: {
+            description: 'Open my github profile',
+            usage: 'github',
+            fn: () => {
+                window.open("https://github.com/MaximeLeBerre", "_blank")
+            }
+        }
     },
     overwrites: {
         help: {
-            description: 'help',
+            description: 'see all commands (ou presque 🤔)',
             usage: 'help',
         },
         clear: {
-            description: 'clear',
+            description: 'Nettoyer le terminal',
             usage: 'clear'
         }
     }
