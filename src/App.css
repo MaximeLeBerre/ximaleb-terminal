@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   border-radius: 0px !important;
-  background: #BCBCBE !important;
+  background: url("./assets/term-bg.png") !important;
 }
 
 .terminal div {

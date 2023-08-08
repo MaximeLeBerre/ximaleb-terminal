@@ -3,13 +3,14 @@ import Terminal from "react-console-emulator";
 import './App.css'
 import {customCommands} from "./domain/commands/index.js";
 import {prettifyHelpReturn} from "./helper/prettifyHelpReturn.js";
+import {welcomeMessage} from "./helper/welcomeMessage.js";
 
 const App = () => {
     const terminal = createRef();
 
     const commands = {
         clear: {
-            description: 'Clears the terminal',
+            description: 'Clear the terminal',
             usage: 'clear',
             fn: () => {
                 terminal.current.clearStdout()
@@ -30,12 +31,12 @@ const App = () => {
                 className="terminal"
                 ref={terminal}
                 commands={commands}
-                welcomeMessage={"Welcome to Ximaleb Terminal! Type 'help'."}
+                welcomeMessage={welcomeMessage}
                 promptLabel={">"}
-                contentStyle={{ color: '#E6490B' , fontWeight: 'normal', paddingLeft: null}} // Text colour
-                promptLabelStyle={{ color: '#151515' , fontWeight:'normal'}} // Prompt label colour
-                inputTextStyle={{ color: '#151515' , fontWeight: 'normal'}}
-                messageStyle={{ color: '#151515' , fontWeight: 'normal', paddingLeft: null}}
+                contentStyle={{ color: '#C35E00' , fontWeight: 'normal', paddingLeft: null}}
+                promptLabelStyle={{ color: '#FFAA5B' , fontWeight:'normal'}}
+                inputTextStyle={{ color: '#FFAA5B' , fontWeight: 'normal'}}
+                messageStyle={{ color: '#BCBCBE' , fontWeight: 'normal', paddingLeft: null}}
                 scrollBehavior="auto"
                 noDefaults
             />
