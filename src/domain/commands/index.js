@@ -79,11 +79,10 @@ export const customCommands = {
                 window.open("https://github.com/MaximeLeBerre", "_blank")
             }
         },
-        toktoktok: {
-            usage: 'toktoktok',
-            description: '*************',
+        ls: {
+            usage: 'ls',
             fn: () => {
-                return "Hey, welcome 👋🏼."
+                return "/terminal"
             },
             hidden: true
         },
