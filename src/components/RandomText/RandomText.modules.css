@@ -1,0 +1,9 @@
+.paragraph {
+    color: #f34d00;
+    width: 400px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 2rem;
+    margin: 0;
+}

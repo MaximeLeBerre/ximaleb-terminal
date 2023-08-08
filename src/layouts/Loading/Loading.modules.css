@@ -1,0 +1,17 @@
+.loadingLayout {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit {
+  transition: 1s cubic-bezier(.5,0,1,.76);
+  transform: translateY(-100%);
+  border-radius: 0px 0px 300px 300px;
+}

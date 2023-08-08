@@ -1,12 +1,15 @@
-import { createRef } from 'react';
+import {createRef} from 'react';
 import Terminal from "react-console-emulator";
 import './App.css'
 import {customCommands} from "./domain/commands/index.js";
 import {prettifyHelpReturn} from "./helper/prettifyHelpReturn.js";
 import {WelcomeMessage} from "./components/WelcomeMessage/WelcomeMessage.jsx";
+import {Loading} from "./layouts/Loading/Loading.jsx";
 
 const App = () => {
     const terminal = createRef();
+
+
 
 
     const commands = {
@@ -28,6 +31,7 @@ const App = () => {
 
     return (
         <div>
+            <Loading />
             <Terminal
                 className="terminal"
                 ref={terminal}
