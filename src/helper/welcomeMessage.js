@@ -12,6 +12,5 @@ export const welcomeMessage = [
     ' |__|  \\___  >__|  |__|_|  /__|___|  (____  /____/',
     '           \\/            \\/        \\/     \\/      ',
     ' ',
-    ' ',
-    'Welcome to Ximaleb terminal. Type `help` to see available commands.'
-].join('\n').replace(/ /g, "\u00A0")
+    ' '
+]

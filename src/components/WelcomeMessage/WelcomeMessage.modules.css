@@ -1,0 +1,13 @@
+.asciWrapper p {
+    margin: 0;
+}
+
+.asciText {
+    color: #e39c1d
+}
+
+.code {
+    background-color: rgb(255, 255, 255, 0.2);
+    padding: 2px;
+    border-radius: 5px;
+}

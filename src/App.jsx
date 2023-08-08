@@ -3,10 +3,11 @@ import Terminal from "react-console-emulator";
 import './App.css'
 import {customCommands} from "./domain/commands/index.js";
 import {prettifyHelpReturn} from "./helper/prettifyHelpReturn.js";
-import {welcomeMessage} from "./helper/welcomeMessage.js";
+import {WelcomeMessage} from "./components/WelcomeMessage/WelcomeMessage.jsx";
 
 const App = () => {
     const terminal = createRef();
+
 
     const commands = {
         clear: {
@@ -31,7 +32,7 @@ const App = () => {
                 className="terminal"
                 ref={terminal}
                 commands={commands}
-                welcomeMessage={welcomeMessage}
+                welcomeMessage={<WelcomeMessage />}
                 promptLabel={">"}
                 contentStyle={{ color: '#C35E00' , fontWeight: 'normal', paddingLeft: null}}
                 promptLabelStyle={{ color: '#FFAA5B' , fontWeight:'normal'}}
@@ -39,6 +40,7 @@ const App = () => {
                 messageStyle={{ color: '#BCBCBE' , fontWeight: 'normal', paddingLeft: null}}
                 scrollBehavior="auto"
                 noDefaults
+                dangerMode={true}
             />
         </div>
     );
