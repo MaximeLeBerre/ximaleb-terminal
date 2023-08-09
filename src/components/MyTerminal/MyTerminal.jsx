@@ -15,6 +15,7 @@ export const MyTerminal = () => {
             usage: 'clear',
             fn: () => {
                 terminal.current.clearStdout()
+                return <WelcomeMessage />
             },
             hidden: false
         },
