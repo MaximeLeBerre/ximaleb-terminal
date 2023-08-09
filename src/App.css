@@ -1,17 +1,4 @@
-.terminal {
-  width: 100vw;
-  height: 100vh;
-  border-radius: 0px !important;
-  background: url("./assets/term-bg.png") !important;
+body {
+    width: 100vw;
+    height: 100vh;
 }
-
-.terminal div {
-  height: auto !important;
-}
-
-
-
-
-
-
-

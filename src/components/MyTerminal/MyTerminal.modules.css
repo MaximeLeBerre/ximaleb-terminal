@@ -1,0 +1,31 @@
+.terminal {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px !important;
+    background: url("../../assets/term-bg.png") !important;
+}
+
+.terminal div {
+    height: auto !important;
+}
+
+.contentStyle {
+    color: #C35E00 !important;
+    font-weight: normal;
+    padding-left: 10px
+}
+
+.promptLabelStyle {
+    color: #FFAA5B;
+    font-weight:normal;
+}
+.inputTextStyle {
+    color: #FFAA5B;
+    font-weight: normal
+}
+
+.messageStyle {
+    color: #BCBCBE;
+    font-weight: normal;
+    paddingLeft: null
+}
