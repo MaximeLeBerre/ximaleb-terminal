@@ -3,6 +3,7 @@ import { About } from "../../components/About/About.jsx";
 import { Resume } from "../../components/Resume/Resume.jsx";
 import { Skills } from "../../components/Skills/Skills.jsx";
 import { Projects } from "../../components/Projects/Projects.jsx";
+import { Contact } from "../../components/Contact/Contact.jsx";
 
 export const customCommands = {
   commands: {
@@ -55,12 +56,11 @@ export const customCommands = {
         window.open("https://github.com/MaximeLeBerre", "_blank");
       },
     },
-    ls: {
-      usage: "ls",
-      fn: () => {
-        return "/terminal";
-      },
-      hidden: true,
+    contact: {
+      description: "get my contact information",
+      usage: "contact",
+      fn: () => <Contact />,
+      hidden: false,
     },
   },
   overwrites: {
