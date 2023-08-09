@@ -1,27 +1,27 @@
 .container {
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 .name {
-    background-color: rgba(227, 156, 29, 0.3);
-    padding: 2px 5px;
-    border-radius: 5px;
-    width: fit-content;
+  background-color: rgba(227, 156, 29, 0.3);
+  padding: 2px 5px;
+  border-radius: 5px;
+  width: fit-content;
 }
 
 .skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 20px;
 }
 
 .skills-container p {
-    margin: 0;
+  margin: 0;
 }
 
 .code {
-    background-color: rgb(255, 255, 255, 0.2);
-    padding: 2px;
-    border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.2);
+  padding: 2px;
+  border-radius: 5px;
 }
