@@ -9,9 +9,6 @@ import {Loading} from "./layouts/Loading/Loading.jsx";
 const App = () => {
     const terminal = createRef();
 
-
-
-
     const commands = {
         clear: {
             description: 'Clear the terminal',
