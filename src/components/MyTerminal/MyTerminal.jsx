@@ -1,6 +1,6 @@
 import {WelcomeMessage} from "../WelcomeMessage/WelcomeMessage.jsx";
 import {prettifyHelpReturn} from "../../helper/prettifyHelpReturn.js";
-import {customCommands} from "../../domain/commands/index.js";
+import {customCommands} from "../../domain/commands/index.jsx";
 import {createRef} from "react";
 import Terminal  from "react-console-emulator";
 import "./MyTerminal.modules.css"

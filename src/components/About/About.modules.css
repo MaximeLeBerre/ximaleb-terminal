@@ -1,0 +1,9 @@
+.code {
+    background-color: rgb(255, 255, 255, 0.2);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.no-margin {
+    margin: 0;
+}

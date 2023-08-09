@@ -1,4 +1,5 @@
-import {calculateAge} from "../../helper/calculateAge.js";
+import {About} from "../../components/About/About.jsx";
+import {Resume} from "../../components/Resume/Resume.jsx";
 
 export const customCommands = {
     commands: {
@@ -6,12 +7,7 @@ export const customCommands = {
             description: "Get a summary about me",
             usage: 'about',
             fn: () => {
-                return [
-                    "Hey, my name is Max 👋🏼",
-                    `I'm ${calculateAge()} years old.`,
-                    "I'm currently Full Stack developer at France Challenges",
-                    "To discover more about me, type resume command"
-                ].join("\n");
+                return <About />
             },
             hidden: false
         },
@@ -19,14 +15,7 @@ export const customCommands = {
             description: "Get my resume",
             usage: 'resume',
             fn: () => {
-                return [
-                    "Sept 2018 - July 2020 - Student in management (apprenticeship)",
-                    "Sept 2020 - Feb 2021 - Web dev bootcamp (Wild Code School)",
-                    "Mar 2021 - May 2021 - Web dev Internship (Melting K, France Challenges)",
-                    "June 2021 - Aug 2022 - Apprenticeship at France Challenges",
-                    "2022 - Occasional freelance jobs",
-                    "Since Sept 2022 - Web dev fullstack at France Challenges on permanent contract"
-                ].join("\n");
+                return <Resume />
             }
         },
         skills: {
@@ -57,9 +46,8 @@ export const customCommands = {
             hidden: false
         },
         goTo: {
-            description: 'Open project',
-            usage: 'goTo <project-name>',
-            args: ['france-challenges', 'webp-converter'],
+            description: 'get information about project',
+            usage: 'goTo [project-name]',
             fn: (args) => {
                 if(args === 'webp-converter') {
                      window.open("https://github.com/MaximeLeBerre/webp-converter", "_blank")
