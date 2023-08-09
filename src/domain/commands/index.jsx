@@ -1,48 +1,32 @@
 import {About} from "../../components/About/About.jsx";
 import {Resume} from "../../components/Resume/Resume.jsx";
+import {Skills} from "../../components/Skills/Skills.jsx";
+import {Projects} from "../../components/Projects/Projects.jsx";
 
 export const customCommands = {
     commands: {
         about: {
             description: "Get a summary about me",
             usage: 'about',
-            fn: () => {
-                return <About />
-            },
+            fn: () =>  <About />,
             hidden: false
         },
         resume: {
             description: "Get my resume",
             usage: 'resume',
-            fn: () => {
-                return <Resume />
-            }
+            fn: () =>  <Resume />,
+            hidden: false
         },
         skills: {
             description: 'Get my skills',
             usage: 'skills',
-            fn: () => {
-                return [
-                    '-----',
-                    'DESIGN 🎨','- figma','- ux/ui principles',
-                    '-----',
-                    'FRONT 🖥️', '- html/css', '- javascript', '- react', '- typescript', '- nextjs',
-                    '-----',
-                    'BACK ⚙️','- nodejs', '- graphql', '- rest','- express', '- strapi',
-                    '-----',
-                    'DB 📚', ' - MongoDB', '- mySql','- arrangoDB',
-                    '-----',
-                    'DEVOPS 🚀', '- github ci', '- docker', '- clevercloud'
-                ].join("\n");
-            }
-
+            fn: () => <Skills />,
+            hidden: false
         },
         projects: {
             description: 'See all my projects',
             usage: 'projects',
-            fn: () => {
-                return ["webp-converter", "france-challenges"].join("\n")
-            },
+            fn: () =>  <Projects />,
             hidden: false
         },
         goTo: {
