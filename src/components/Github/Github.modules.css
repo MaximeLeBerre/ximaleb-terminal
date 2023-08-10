@@ -1,0 +1,15 @@
+.code {
+  background-color: rgb(255, 255, 255, 0.2);
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.link {
+  color: #e39c1d;
+}
+
+.link:hover {
+  color: #c18212;
+  text-decoration: none;
+  cursor: pointer;
+}

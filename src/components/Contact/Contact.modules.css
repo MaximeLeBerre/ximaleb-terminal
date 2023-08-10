@@ -1,0 +1,21 @@
+.contact {
+  background-color: rgba(227, 156, 29, 0.3);
+  padding: 2px 5px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.contact:hover {
+  background-color: rgba(227, 156, 29, 0.4);
+  cursor: pointer;
+}
+
+.link {
+  color: #e39c1d;
+}
+
+.link:hover {
+  color: #c18212;
+  text-decoration: none;
+  cursor: pointer;
+}

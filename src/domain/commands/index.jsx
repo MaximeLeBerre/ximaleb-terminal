@@ -4,6 +4,7 @@ import { Resume } from "../../components/Resume/Resume.jsx";
 import { Skills } from "../../components/Skills/Skills.jsx";
 import { Projects } from "../../components/Projects/Projects.jsx";
 import { Contact } from "../../components/Contact/Contact.jsx";
+import { Github } from "../../components/Github/Github.jsx";
 
 export const customCommands = {
   commands: {
@@ -29,10 +30,10 @@ export const customCommands = {
       description: "See all my projects",
       usage: "projects",
       fn: () => <Projects />,
-      hidden: false,
+      hidden: true,
     },
     goTo: {
-      description: "get information about project",
+      description: "Get information about project",
       usage: "goTo [project-name]",
       fn: (args) => {
         if (args === "webp-converter") {
@@ -48,16 +49,18 @@ export const customCommands = {
         }
         return "invalid params";
       },
+      hidden: true,
     },
     github: {
       description: "Open my github profile",
       usage: "github",
       fn: () => {
         window.open("https://github.com/MaximeLeBerre", "_blank");
+        return <Github />;
       },
     },
     contact: {
-      description: "get my contact information",
+      description: "Get my contact information",
       usage: "contact",
       fn: () => <Contact />,
       hidden: false,

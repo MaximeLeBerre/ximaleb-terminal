@@ -1,9 +1,9 @@
 import React, { createRef } from "react";
 import { WelcomeMessage } from "../WelcomeMessage/WelcomeMessage.jsx";
-import { prettifyHelpReturn } from "../../helper/prettifyHelpReturn.js";
 import { customCommands } from "../../domain/commands/index.jsx";
 import Terminal from "react-console-emulator";
 import "./MyTerminal.modules.css";
+import { Help } from "../Help/Help.jsx";
 
 export const MyTerminal = () => {
   const terminal = createRef();
@@ -19,9 +19,7 @@ export const MyTerminal = () => {
       hidden: false,
     },
     help: {
-      fn: () => {
-        return prettifyHelpReturn(customCommands);
-      },
+      fn: () => <Help />,
     },
     ...customCommands.commands,
   };

@@ -1,0 +1,28 @@
+.container {
+  margin-top: 20px;
+  width: fit-content;
+}
+
+.table {
+  border: 1px solid #bcbcbe;
+  border-collapse: collapse;
+}
+
+.table tr th {
+  border: 1px solid #bcbcbe;
+}
+
+.table tr td {
+  border: 1px solid #bcbcbe;
+  text-align: start !important;
+  padding: 0 30px 0 10px;
+}
+
+.code {
+  background-color: rgb(255, 255, 255, 0.2);
+  padding: 2px;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+  width: fit-content;
+}
